@@ -1,0 +1,30 @@
+doctype html
+html
+
+    include head.jade
+
+    body
+
+        include header.jade
+
+        .grid
+            .grid__col--12
+                h1.headline-primary--grouped.text-centered Ask
+                h2.headline-secondary--grouped.text-centered.
+                    Ralph Maltby & the Maltby Experts at <a href="#">The GolfWorks</a>
+
+        .grid
+            .grid__col--9
+                form.form
+                    label.form__label--hidden(for="search") Search for your answer:
+                    .search-box
+                        input.form__input(type="text", placeholder="Search for your answer...")
+                        button.form__btn--search(type="submit")
+                            i.fa.fa-search
+            .grid__col--3
+                button.btn--default Ask Your Question
+
+        .grid
+            .centered.grid__col-10
+
+        include footer.jade

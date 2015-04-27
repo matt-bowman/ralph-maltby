@@ -1,0 +1,36 @@
+doctype html
+html
+
+    include head.jade
+
+    body
+
+        include header.jade
+
+        .is-hidden-mobile
+                img.img--centered.img--hero(src="img/Ralph-Working.jpg", alt="Ralph Maltby Working")
+
+        .grid
+            .centered.grid__col--12
+                h1.headline-primary--large.text-centered Ralph Maltby
+                h2.headline-secondary--grouped.text-centered golf expert / designer / teacher
+                button.btn--large(href="#") learn more about ralph
+
+        .grid.text-centered
+            .grid__col--4
+                i.fa.fa-graduation-cap.fa-5x
+                h4 Learn How Golf Works
+                p Learn timeless golf secrets, how to, information, and more from Ralph Maltby.
+                button.btn--warning start learning
+            .grid__col--4
+                i.fa.fa-comments.fa-5x.fa-primary
+                h4 Ask Your Questions
+                p If you have a question simply ask it in our ask section to get help from Maltby & Golf experts.
+                button.btn--default ask your questions
+            .grid__col--4
+                i.fa.fa-twitter.fa-5x
+                h4 Stay In Touch
+                p Easily comment using your Facebook, Twitter, or Google account and follow or like us for the latest updates.
+                button.btn--warning connect with us
+
+        include footer.jade

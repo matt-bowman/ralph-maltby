@@ -1,0 +1,33 @@
+// ==========================================================================
+// Menu
+// ==========================================================================
+
+.menu {
+	@include e(link) {
+		@extend %menu-link;
+		@include m(end) {
+			@extend %menu-link;
+		}
+
+                        @include m(large) {
+                                    @extend %menu-link;
+                                    margin-left: -10px;
+                                    border: 0;
+                                    font-size: em(21px);
+                                    border-bottom: 0;
+                                    .fa {
+                                        float: left;
+                                        margin-top: em(4px);
+                                        margin-right: em(12px);
+                                    }
+
+                                    a {
+                                        &:hover {
+                                            .fa {
+                                                color: $color-primary;
+                                            }
+                                        }
+                                    }
+                        }
+	}
+}

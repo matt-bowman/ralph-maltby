@@ -1,0 +1,54 @@
+doctype html
+html
+
+    include head.jade
+
+    body
+
+        include header.jade
+
+        .grid
+            .grid__col--12
+                h1.headline-primary--grouped.text-centered Let's stay in touch
+                h2.headline-secondary--grouped.text-centered.
+                    join our <a href="#">club making communiuty</a> or by <a href="#">following us on social media</a>
+            .centered.grid__col--8
+                form.form
+                    label.form__label--hidden(for="name") Name:
+                    input#name.form__input(type="text", placeholder="Name")
+
+                    label.form__label--hidden(for="email") Email:
+                    input#email.form__input(type="email", placeholder="email@website.com")
+
+                    label.form__label--hidden(for="msg") Message:
+                    textarea#msg.form__input(placeholder="Message...", rows="7")
+
+                    input.form__btn(type="submit", value="Submit")
+
+        .grid.text-centered
+            .grid__col--6
+                i.fa.fa-twitter.fa-5x
+                a(href="http://www.twitter.com/RalphMaltby"): h3 Twitter
+                p @RalphMaltby
+            .grid__col--6
+                i.fa.fa-facebook.fa-5x
+                a(href="http://www.facebook.com/TheRalphMaltby"): h3 Facebook
+                p /RalphMaltby
+
+        .grid.text-centered
+            .grid__col--4
+                i.fa.fa-envelope-o.fa-5x
+                a(href="mailto:Support@RalphMaltby.com"): h3 Email
+                p Support@RalphMaltby.com
+            .grid__col--4
+                i.fa.fa-map-marker.fa-5x
+                a(href="https://www.google.com/maps/place/4820+Jacksontown+Rd,+Newark,+OH+43056/data=!4m2!3m1!1s0x8838179e3e0376f3:0x2eefcce4ba30923b?sa=X&ei=8sI3VfKfLIP7sAXJroH4Cg&ved=0CB4Q8gEwAA"): h3 Address
+                p.
+                    4820 Jacksontown Rd<br>
+                    Newark, OH 43056
+            .grid__col--4
+                i.fa.fa-phone.fa-5x
+                a(href="tel:740-328-4193"): h3 Phone
+                p (740)-328-4193
+
+        include footer.jade

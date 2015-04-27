@@ -1,0 +1,71 @@
+// ==========================================================================
+// Form Elements
+// ==========================================================================
+
+.form {
+	@include e(label) {
+		@include m(hidden) {
+			@extend .srt;
+		}
+		display: block;
+		margin-bottom: em(10px);
+	}
+
+	@include e(input) {
+		font-size : em(18px);
+		margin-top: em(10px, 18px);
+		margin-bottom: em(20px, 18px);
+		border: 1px solid palette(grey, x-light);
+		background: palette(white, dark);
+		color: palette(grey, xx-dark);
+		font-weight: $font-weight--light;
+
+		&:focus {
+			border-color: palette(grey, light);
+		}
+	}
+
+	@include e(btn) {
+		@extend %btn;
+		background: $color-primary;
+
+		@include m(search) {
+			@extend %btn;
+			background: $color-primary;
+			color: $white !important;
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50px;
+			padding: em(3px);
+
+			@include mq(medium) {
+				width: 100px;
+				padding: em(20px);
+			}
+		}
+	}
+
+}
+
+.search-box {
+	position: relative;
+	input {
+		padding: em(10px);
+		font-size: em(16px);
+		margin-top: 0;
+		@include mq(medium) {
+			padding: em(20px);
+			font-size: em(21px);
+			margin-top: 0;
+		}
+	}
+
+	.form__input {
+
+		@include mq(medium) {
+			padding-right: em(80px);
+		}
+	}
+}

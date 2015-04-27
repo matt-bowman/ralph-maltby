@@ -1,0 +1,137 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+// Nav Items
+
+%nav-item-horz {
+  @include mq(medium) {
+    display: inline-block;
+    margin: 0 em(10px);
+  }
+}
+%nav-item-link {
+  font-weight: $font-weight--bold;
+  text-align: center;
+  font-size: em(21px);
+  display: block;
+  padding: em(14px, 21px) 0;
+  border-bottom: 8px solid transparent;
+  @include mq(medium) {
+    border-bottom-color: transparent;
+    padding: em(3px, 21px) 0;
+    margin-left: em(2px, 21px);
+    margin-right: em(2px, 21px);
+
+  }
+  @include mq(large) {
+    margin-left: em(12px, 21px);
+    margin-right: em(12px, 21px);
+  }
+}
+%nav-item-on {
+  border-color: palette(white);
+}
+
+// Headlines
+
+%hdln-prim {
+  color: $color-primary;
+  font-weight: $font-weight--bold;
+  margin-top: 0;
+  font-size: em(36px);
+  line-height: (48px/36px);
+  @include mq(medium) {
+    font-size: em(48px);
+    line-height: (60px/48px);
+  }
+}
+
+%hdln-sec {
+  color: palette(grey);
+  font-weight: $font-weight--light;
+  font-size: em(24px);
+  @include mq(medium) {
+    font-size: em(36px);
+  }
+  a {
+    border-bottom: 1px solid palette(grey);
+
+    &:hover {
+      border: 0;
+    }
+  }
+}
+
+%hdln-article {
+  color: palette(grey, x-dark);
+  font-weight: $font-weight--bold;
+  font-size: em(36px);
+  line-height: (48px/36px);
+  @include mq(medium) {
+    font-size: em(48px);
+    line-height: (48px/36px);
+  }
+}
+
+// Buttons
+
+%btn {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @include mq(medium) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  border: 0;
+  color: $white;
+  text-transform: lowercase;
+  font-size : em(18px);
+  font-weight: $font-weight--bold;
+  transition: opacity $trns-duration;
+  display: block;
+  &:hover {
+    opacity: .75;
+  }
+  &:active {
+    opacity: initial;
+  }
+}
+
+// Menu link
+
+%menu-link {
+  display: block;
+  margin-top: em(16px);
+  margin-bottom: em(4px);
+  padding-left: em(10px);
+  border-left: 8px solid palette(grey, x-light);
+  color: $grey;
+  text-align: left;
+  text-shadow: 0 1px $color-shadow;
+  font-size: em(18px);
+  font-weight: $font-weight--light;
+
+  a {
+    border: 0;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+// Icons
+
+%icn--ui {
+	line-height: 0;
+	cursor: pointer;
+}
+
+%nav-toggle {
+      width: 24px;
+      height: 20px;
+      border-top: solid 4px palette(white);
+      border-bottom: solid 4px palette(white);
+      position: relative;
+      float: right;
+}

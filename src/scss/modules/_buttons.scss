@@ -1,0 +1,51 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+.btn {
+  @include ui-colors($ui-colors);
+}
+
+[class^="btn--"] {
+  @extend %btn;
+  @extend %center-align;
+  margin-bottom: em(20px);
+  @include mq(small) {
+  	width: 100%;
+  }
+  @include mq(medium) {
+    width: 100%;
+    display: inline-block;
+		@include doubly(20px);
+  }
+}
+
+.btn {
+  @extend %btn;
+  @extend %center-align;
+  margin-bottom: em(20px);
+
+  @include m(large) {
+    background-color: $color-primary;
+    font-size: em(21px);
+    @include mq(small) {
+      width: 100%;
+    }
+    @include mq(medium) {
+      width: 480px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: em(20px);
+      margin-bottom: em(60px);
+    }
+  }
+
+  @include m(small) {
+    font-size: em(18px);
+    @include mq(medium) {
+      width: 300px;
+    }
+  }
+}
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ralph Maltby</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  </head>
+  <body>
+    <div class="panel-primary--bottom-margin">
+      <div class="grid">
+        <header role="banner" class="grid__col--12 panel"><a href="index.html" class="site-logo--left"><b class="srt">Ralph Maltby</b></a>
+          <nav role="navigation" class="navbar"><span id="toggle" class="icn--nav-toggle is-displayed-mobile"><b class="srt">Toggle</b></span>
+            <ul class="nav is-collapsed-mobile">
+              <li class="nav__item"><a href="products.html">products</a></li>
+              <li class="nav__item"><a href="learn.html">learn</a></li>
+              <li class="nav__item"><a href="ask.html">ask</a></li>
+              <li class="nav__item"><a href="about.html">about</a></li>
+              <li class="nav__item"><a href="contact.html">contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="grid__col--12">
+        <h1 class="headline-primary--grouped text-centered">Let's stay in touch</h1>
+        <h2 class="headline-secondary--grouped text-centered">join our <a href="#">club making communiuty</a> or by <a href="#">following us on social media</a></h2>
+      </div>
+      <div class="centered grid__col--8">
+        <form class="form">
+          <label for="name" class="form__label--hidden">Name:</label>
+          <input id="name" type="text" placeholder="Name" class="form__input">
+          <label for="email" class="form__label--hidden">Email:</label>
+          <input id="email" type="email" placeholder="email@website.com" class="form__input">
+          <label for="msg" class="form__label--hidden">Message:</label>
+          <textarea id="msg" placeholder="Message..." rows="7" class="form__input"></textarea>
+          <input type="submit" value="Submit" class="form__btn">
+        </form>
+      </div>
+    </div>
+    <div class="grid text-centered">
+      <div class="grid__col--6"><i class="fa fa-twitter fa-5x"></i><a href="http://www.twitter.com/RalphMaltby">
+          <h3>Twitter</h3></a>
+        <p>@RalphMaltby</p>
+      </div>
+      <div class="grid__col--6"><i class="fa fa-facebook fa-5x"></i><a href="http://www.facebook.com/TheRalphMaltby">
+          <h3>Facebook</h3></a>
+        <p>/RalphMaltby</p>
+      </div>
+    </div>
+    <div class="grid text-centered">
+      <div class="grid__col--4"><i class="fa fa-envelope-o fa-5x"></i><a href="mailto:Support@RalphMaltby.com">
+          <h3>Email</h3></a>
+        <p>Support@RalphMaltby.com</p>
+      </div>
+      <div class="grid__col--4"><i class="fa fa-map-marker fa-5x"></i><a href="https://www.google.com/maps/place/4820+Jacksontown+Rd,+Newark,+OH+43056/data=!4m2!3m1!1s0x8838179e3e0376f3:0x2eefcce4ba30923b?sa=X&amp;ei=8sI3VfKfLIP7sAXJroH4Cg&amp;ved=0CB4Q8gEwAA">
+          <h3>Address</h3></a>
+        <p>
+          4820 Jacksontown Rd<br>
+          Newark, OH 43056
+        </p>
+      </div>
+      <div class="grid__col--4"><i class="fa fa-phone fa-5x"></i><a href="tel:740-328-4193">
+          <h3>Phone</h3></a>
+        <p>(740)-328-4193</p>
+      </div>
+    </div>
+    <div class="panel-secondary--top-margin">
+      <div class="grid">
+        <footer class="grid__col--12 panel--centered"><a href="index.html" class="site-logo--right is-hidden-mobile"><b class="srt">Ralph Maltby</b></a>
+          <ul class="nav--left">
+            <li class="nav__item--small"><a href="products.html">products</a></li>
+            <li class="nav__item--small"><a href="learn.html">learn</a></li>
+            <li class="nav__item--small"><a href="ask.html">ask</a></li>
+            <li class="nav__item--small"><a href="about.html">about</a></li>
+            <li class="nav__item--small"><a href="contact.html">contact</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      $('header .nav a').each(function() {
+          if ($(this).prop('href') == window.location.href) {
+              $(this).parent().removeClass('nav__item').addClass('nav__item--current');
+          }
+      });
+      
+      $(document).ready(function(){
+          $(".accordian h3").click(function(){
+              $(".accordian ul ul").slideUp();
+              if(!$(this).next().is(":visible"))
+              {
+                  $(this).next().slideDown();
+              }
+          })
+      })
+      
+      $('#toggle').click(function() {
+          $(this).next('.nav').toggleClass("is-collapsed-mobile");
+      });
+    </script>
+  </body>
+</html>

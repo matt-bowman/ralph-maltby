@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ralph Maltby</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  </head>
+  <body>
+    <div class="panel-primary--bottom-margin">
+      <div class="grid">
+        <header role="banner" class="grid__col--12 panel"><a href="index.html" class="site-logo--left"><b class="srt">Ralph Maltby</b></a>
+          <nav role="navigation" class="navbar"><span id="toggle" class="icn--nav-toggle is-displayed-mobile"><b class="srt">Toggle</b></span>
+            <ul class="nav is-collapsed-mobile">
+              <li class="nav__item"><a href="products.html">products</a></li>
+              <li class="nav__item"><a href="learn.html">learn</a></li>
+              <li class="nav__item"><a href="ask.html">ask</a></li>
+              <li class="nav__item"><a href="about.html">about</a></li>
+              <li class="nav__item"><a href="contact.html">contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="grid__col--12">
+        <h1 class="headline-secondary--grouped text-centered">The Life & Times of</h1>
+        <h2 class="headline-primary--large text-centered">Ralph Maltby</h2>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="centered grid__col--8">
+        <h3>Background</h3>
+        <p>Ralph Maltby has been designing and evaluating golf equipment for more than 40 years. He is universally regarded as one of the premier golf equipment experts in the world.</p>
+        <p>Ralph began his career designing and engineering for a number of major golf equipment manufacturers. He went on to found The GolfWorks in 1976, providing clubmakers and other golf equipment experts with club components, clubmaking tools and supplies, and technical information.</p>
+        <p>Ralph created the Maltby Playability Factor club rating system, through which he has tested and rated the performance of more than 1000 golf clubs. He has published seven books, secured multiple patents and lectured at more than 250 PGA Business Schools. Ralph has released a wide range of instructional videos and is a frequent guest on The Golf Channel.</p>
+      </div>
+      <div class="centered grid__col--10">
+        <blockquote>In 1991 he was listed by Golf Digest magazine as one of the 36 most powerful men in golf and in 1996 was inducted into the “Professional Clubmakers Society” Hall of Fame.</blockquote>
+      </div>
+    </div><img src="img/Ralph-Working.jpg" class="img--centered img--hero">
+    <div class="grid">
+      <div class="centered grid__col--8">
+        <h3>Hall of Fame</h3>
+        <p>The GolfWorks is proud to announce that its founder, Ralph Maltby, has been inducted into the Ohio Golf hall of Fame, joining other notables such as Jack Nicklaus, Arnold Palmer, Byron Nelson and Tom Weiskopf. The Ohio Golf Hall of Fame honors men and women who have made a substantial impact on golf as players, architects, tournament directors, administrators and club professionals and who have contributing in making Ohio a leader in the game.</p>
+      </div>
+      <div class="centered grid__col--10">
+        <blockquote>“From innovative golf club design to the advancement of custom clubmaking to in-depth research in making the game more enjoyable, Ralph has made a huge contribution to golf, and we’re extremely proud of his induction to the Ohio Golf Hall of Fame,” says Mark McCormick, CEO of The GolfWorks.</blockquote>
+      </div>
+      <div class="centered grid__col--8">
+        <p>Ralph Maltby began his career in golf with Spalding in 1969. In 1976, Maltby founded The GolfWorks, which has since grown to become the world’s leading source for research, development, technical services and education for custom clubmaking. With offices in Canada and the United Kingdom, The GolfWorks manufactures and distributes machines, gauges, tools and supplies worldwide. Used by golf club repair shops, golf pros, original equipment manufacturers and clubmakers, The GolfWorks’ tools and supplies have become the universal standard in performance and quality.</p>
+        <p>In addition to clubmaking machinery and supplies, Maltby has been at the forefront in the most advanced clubhead designs of the last 30 years and has served as consultant to such renowned golf equipment manufacturers as Maxfli, Powerbilt and Tommy Armour.</p>
+        <p>Ralph has lectured at more than 250 PGA business schools on golf club design principles, golf club fitting and golf club repair procedures. he has taught Tour player schools, repair and fitting workshops for the PGA, and has written numerous instructional books and articles for golfing publications around the world. he is a member of the Golf Writers Association of America and The Golf Collectors Society. in 1991 he was listed by Golf Digest as one of the 36 most powerful men in golf, and in 1996 was inducted into the Professional Clubmakers Society Hall of Fame.</p>
+        <p>Earlier this year, Maltby published the results of decades-long research in his latest book on golf club design, The Maltby Playability Factor – Understanding Golf Club Dynamics, Book One: Irons. Based on decades of experience, he developed a comprehensive system to select the right iron head desigs for golfers of every playing ability, including tour professionals, and this new book translates the theory and history of iron design into a practical guide for understanding iron playability.</p>
+      </div>
+    </div>
+    <div class="panel-secondary--top-margin">
+      <div class="grid">
+        <footer class="grid__col--12 panel--centered"><a href="index.html" class="site-logo--right is-hidden-mobile"><b class="srt">Ralph Maltby</b></a>
+          <ul class="nav--left">
+            <li class="nav__item--small"><a href="products.html">products</a></li>
+            <li class="nav__item--small"><a href="learn.html">learn</a></li>
+            <li class="nav__item--small"><a href="ask.html">ask</a></li>
+            <li class="nav__item--small"><a href="about.html">about</a></li>
+            <li class="nav__item--small"><a href="contact.html">contact</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      $('header .nav a').each(function() {
+          if ($(this).prop('href') == window.location.href) {
+              $(this).parent().removeClass('nav__item').addClass('nav__item--current');
+          }
+      });
+      
+      $(document).ready(function(){
+          $(".accordian h3").click(function(){
+              $(".accordian ul ul").slideUp();
+              if(!$(this).next().is(":visible"))
+              {
+                  $(this).next().slideDown();
+              }
+          })
+      })
+      
+      $('#toggle').click(function() {
+          $(this).next('.nav').toggleClass("is-collapsed-mobile");
+      });
+    </script>
+  </body>
+</html>

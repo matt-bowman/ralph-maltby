@@ -1,0 +1,56 @@
+// ==========================================================================
+// Nav
+// ==========================================================================
+
+.nav {
+	padding-top: em(36px);
+	padding-bottom: 0;
+
+	@include mq(medium) {
+		padding-top: em(3px);
+	}
+
+	@include m(left) {
+		@include mq(medium) {
+			float: left;
+		}
+	}
+
+	@include m(right) {
+		@include mq(medium) {
+			float: right;
+		}
+	}
+
+	@include e(item) {
+		@extend %nav-item-horz;
+
+		@include m(small) {
+			@extend %nav-item-horz;
+			@extend %nav-item-on;
+			a {
+				@extend %nav-item-link;
+				color: palette(white);
+				font-size: em(16px);
+				margin-top: em(8px);
+			}
+		}
+
+
+		@include m(current) {
+			@extend %nav-item-horz;
+			a {
+				@extend %nav-item-link;
+				@extend %nav-item-on;
+				color: palette(white);
+			}
+		}
+		a {
+			@extend %nav-item-link;
+			color: palette(white);
+			&:hover {
+				@extend %nav-item-on;
+			}
+		}
+	}
+}

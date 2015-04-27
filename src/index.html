@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ralph Maltby</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  </head>
+  <body>
+    <div class="panel-primary--bottom-margin">
+      <div class="grid">
+        <header role="banner" class="grid__col--12 panel"><a href="index.html" class="site-logo--left"><b class="srt">Ralph Maltby</b></a>
+          <nav role="navigation" class="navbar"><span id="toggle" class="icn--nav-toggle is-displayed-mobile"><b class="srt">Toggle</b></span>
+            <ul class="nav is-collapsed-mobile">
+              <li class="nav__item"><a href="products.html">products</a></li>
+              <li class="nav__item"><a href="learn.html">learn</a></li>
+              <li class="nav__item"><a href="ask.html">ask</a></li>
+              <li class="nav__item"><a href="about.html">about</a></li>
+              <li class="nav__item"><a href="contact.html">contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="is-hidden-mobile"><img src="img/Ralph-Working.jpg" alt="Ralph Maltby Working" class="img--centered img--hero"></div>
+    <div class="grid">
+      <div class="centered grid__col--12">
+        <h1 class="headline-primary--large text-centered">Ralph Maltby</h1>
+        <h2 class="headline-secondary--grouped text-centered">golf expert / designer / teacher</h2>
+        <button href="#" class="btn--large">learn more about ralph</button>
+      </div>
+    </div>
+    <div class="grid text-centered">
+      <div class="grid__col--4"><i class="fa fa-graduation-cap fa-5x"></i>
+        <h4>Learn How Golf Works</h4>
+        <p>Learn timeless golf secrets, how to, information, and more from Ralph Maltby.</p>
+        <button class="btn--warning">start learning</button>
+      </div>
+      <div class="grid__col--4"><i class="fa fa-comments fa-5x fa-primary"></i>
+        <h4>Ask Your Questions</h4>
+        <p>If you have a question simply ask it in our ask section to get help from Maltby & Golf experts.</p>
+        <button class="btn--default">ask your questions</button>
+      </div>
+      <div class="grid__col--4"><i class="fa fa-twitter fa-5x"></i>
+        <h4>Stay In Touch</h4>
+        <p>Easily comment using your Facebook, Twitter, or Google account and follow or like us for the latest updates.</p>
+        <button class="btn--warning">connect with us</button>
+      </div>
+    </div>
+    <div class="panel-secondary--top-margin">
+      <div class="grid">
+        <footer class="grid__col--12 panel--centered"><a href="index.html" class="site-logo--right is-hidden-mobile"><b class="srt">Ralph Maltby</b></a>
+          <ul class="nav--left">
+            <li class="nav__item--small"><a href="products.html">products</a></li>
+            <li class="nav__item--small"><a href="learn.html">learn</a></li>
+            <li class="nav__item--small"><a href="ask.html">ask</a></li>
+            <li class="nav__item--small"><a href="about.html">about</a></li>
+            <li class="nav__item--small"><a href="contact.html">contact</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      $('header .nav a').each(function() {
+          if ($(this).prop('href') == window.location.href) {
+              $(this).parent().removeClass('nav__item').addClass('nav__item--current');
+          }
+      });
+      
+      $(document).ready(function(){
+          $(".accordian h3").click(function(){
+              $(".accordian ul ul").slideUp();
+              if(!$(this).next().is(":visible"))
+              {
+                  $(this).next().slideDown();
+              }
+          })
+      })
+      
+      $('#toggle').click(function() {
+          $(this).next('.nav').toggleClass("is-collapsed-mobile");
+      });
+    </script>
+  </body>
+</html>

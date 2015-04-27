@@ -1,0 +1,47 @@
+// ==========================================================================
+// Panels
+// ==========================================================================
+
+.panel {
+	&-primary {
+		background: $color-primary;
+
+		@include m(top-margin) {
+			@extend .panel-primary;
+			margin-top: em(40px);
+		}
+
+		@include m(bottom-margin) {
+			@extend .panel-primary;
+			margin-bottom: em(20px);
+		}
+	}
+
+	&-secondary {
+		background: palette(grey, xx-dark);
+
+		@include m(top-margin) {
+			@extend .panel-secondary;
+			margin-top: em(40px);
+		}
+
+		@include m(bottom-margin) {
+			@extend .panel-secondary;
+			margin-bottom: em(20px);
+		}
+	}
+
+	@extend %panel-default;
+
+	@include m(centered) {
+		@extend %panel-default;
+		@extend %center-align;
+	}
+	@include m(padded) {
+		@extend %panel-padding;
+		@include m(centered) {
+			@extend %center-align;
+			@extend %panel-padding;
+		}
+	}
+}
